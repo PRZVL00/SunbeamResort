@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'CSS/4_SMS_Confirmation_CSS.css' %}">
+
+
+    <title>SUNBEAM RESORT</title>
+
+</head>
+
+<!-- <header>
+<img class="logo" src="left.png" alt="logo">
+<nav>
+    <ul class="nav">
+        <h1 class="text">SUNBEAM RESORT&nbsp;&nbsp;&nbsp;</h1>
+    </ul>
+</nav>
+<img class="logo" src="right.png" alt="logo">
+
+</header> -->
+
+<body style = "background-image:url('{% static 'MEDIA/bg2.jpg'%}');">
+    <script src="{% static 'JAVA/5_SMS_Confirmation_Script.js'%}"></script>
+    <section>
+        <div class="box">
+            <h2> Reservation Successful!</h2>
+            <h1 style="position: relative; text-align: center; font-family: 'Open Sans', sans-serif; font-size: 50px; color: white;">{{customer.code}}</h1>
+            <p>Here is your confirmation number. Please present this to the</p>
+            <p> front desk while checking in.</p>
+            <form action="" method="POST" id="form" name="form">
+                {% csrf_token %}
+            <input type="text" id="c_code" name="c_code" value="{{customer.code}}" hidden>
+            <input type="text" id="email" name="email" value="{{customer.email}}" hidden>
+            <button class="button button1" onclick=submit_form()>Done</button>
+        </div>
+        
+    </section>
+
+</body>
+
+</html>

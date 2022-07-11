@@ -1,0 +1,491 @@
+/*------ TOPBAR -----*/
+.top-bar {
+    background: #00008B;
+    height: 2.8rem;
+    padding: .5rem 0;
+}
+.top-bar p {
+    color: white;
+    text-decoration: none;
+    font-size: .9rem;
+    font-family: cursive;  
+}
+
+/*------ NAVIGATION -----*/
+.navbar-brand img {
+    height: 4rem;
+    margin-left: 5%;
+}
+.navbar {
+    font-family: monospace;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: .05rem;
+    box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .1);
+    z-index: 1;
+}
+.nav-item {
+    padding: .5rem;
+}
+.navbar-nav> li > a:hover {
+   background-color:#4169E1;
+   border: medium none;
+   border-radius: 0;
+   color: #4682B4;
+}
+
+/*------background-----*/
+body {
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment: fixed;
+
+}
+
+/*------ RESERVATION & BOOKING------*/
+
+.table-responsive {
+    width: auto;
+    padding: 15px;
+    border: 3px solid black;
+    background-color: white;
+    margin: 50px;
+}
+.table.table-striped td{
+    text-align: center;
+}
+.button {
+    text-align: center;
+  }
+.btn.btn-danger.btn-sm:hover{
+    background-color: red;
+}
+.btn.btn-primary:hover {
+    background-color: blue;
+}
+.btn.btn-success:hover {
+    background-color: red;
+}
+
+/*-----INVENTORY-----*/ 
+* {
+    box-sizing: border-box;
+  }
+  
+.row {
+  margin-left:-5px;
+  margin-right:-5px;
+}
+    
+.column1 {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+.column2 {
+  float: right;
+  width: 50%;
+  padding: 5px;
+}
+.column3 {
+  float: left;
+  width: 50%;
+  padding: 5px;
+  object-position: center;
+}
+
+.column4 {
+  float: right;
+  width: 50%;
+  padding: 5px;
+  object-position: center;
+}
+
+.col-12 h3 {
+  text-shadow: 2px 1px 3px rgba(0, 0, 0, .1);
+  font-size: 2rem;
+  letter-spacing: 3pt;
+  text-align: center;
+  color: #DC143C;
+  font-weight: 600;
+  font-family: 'Courier New';
+}
+.table-responsive {
+  width: auto;
+  padding: 15px;
+  border: 3px solid black;
+  background-color: white;
+  margin: 50px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+  
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+  
+th, td {
+  text-align: center;
+  padding: 20px;
+}
+  
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+h3 {
+  text-align: center;
+}
+        
+/***** ADD ITEM--------*/
+.row {
+  padding-top: .9rem;
+}
+.card-body {
+  padding: .1rem 0;
+}
+.card-title {
+  text-align: center;
+  letter-spacing: 2pt;
+  font-family: 'Courier New';
+  font-size: 1.2rem;
+  color: #DC143C;
+  font-weight: 600;
+}
+
+.input {
+  width: 100%;
+  max-width: 100%;
+  font-size: medium;
+}
+.form-group {
+  font-family: 'Courier New';
+  padding: .3rem 0;
+  margin: 1px;
+}
+.btn.btn-default1 {
+  background-color: gray;
+  }
+
+.btn.btn-default1:hover {
+  background-color: red;
+  }
+
+.btn.btn-default2 {
+  background-color: gray;
+  }
+
+.btn.btn-default2:hover {
+  background-color: rgb(12, 227, 12);
+  }
+
+#activities {
+  text-align: center;
+  font-size: 30px;
+}
+  
+#act {
+  margin-right: 20px;
+  width: 20px;
+  height: 20px;
+}
+  
+#act2 {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+#act1 {
+  margin-top: -15px;
+  font-size: 25px;
+}
+#act2x {
+  margin-top: -15px;
+  font-size: 25px;
+}
+#act3 {
+  margin-top: -15px;
+  font-size: 25px;
+}
+#act4 {
+  margin-top: -15px;
+  font-size: 25px;
+}
+
+/***** UPDATE ITEM ****/
+.dropdown {
+  font-family: 'Courier New';
+  padding: .3rem 0;
+}
+.btn.btn-default.dropdown-toggle {
+  background-color: gray;
+  width: 100%;
+  max-width: 100%;
+}
+.btn.btn-default.dropdown-toggle:hover {
+  background-color: green;
+}
+.dropdown2 {
+  width: 50%;
+  max-width: 50%;
+  font-family: 'Courier New';
+}
+.form-group2 {
+  width: 50%;
+  max-width: 50%;
+  font-family: 'Courier New';
+}
+.card-body2 { 
+  padding: .1rem 0;
+}
+.col-sm-3 {
+  padding: .5rem;
+}
+
+/*salesrecord*/
+
+.container-sr th {
+  text-align: center;
+}
+
+.button.btn-primary:hover {
+  text-align: center;
+}
+
+h3 {
+  text-shadow: 2px 1px 3px rgba(0, 0, 0, .1);
+  font-size: 2rem;
+  letter-spacing: 3pt;
+  text-align: center;
+  color: #DC143C;
+  font-weight: 600;
+  font-family: 'Courier New';
+}  
+
+/*-----FEEDBACK------*/
+.container-fb th {
+  text-align: center;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+@import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500&family=Ubuntu&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 1000px;
+}
+
+header {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #5e5547;
+  height: 100px;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.text {
+  font-family: "Fuzzy Bubbles", cursive;
+  color: #ffff;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.nav {
+  list-style: none;
+}
+
+section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(bg2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.leftbox {
+  position: relative;
+  margin-left: 50px;
+  margin-right: 25px;
+  padding: 50 px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  width: 50%;
+  /* height: 75%; */
+}
+
+.leftbox h4 {
+  text-align: left;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  padding-left: 20px;
+}
+
+.rightbox {
+  position: relative;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  width: 100%;
+  /* height: 75%; */
+}
+
+.rightbox:before {
+  content: "";
+  position: relative;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background-attachment: fixed;
+  filter: blur(2px);
+}
+
+.rightbox h4 {
+  text-align: left;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 19px;
+  color: rgb(0, 0, 0);
+  padding-left: 20px;
+}
+
+.innerleftleft {
+  width: 50%;
+  float: left;
+}
+
+.innerrightleft {
+  width: 50%;
+  float: right;
+}
+
+/* Button Effect */
+.button {
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #4caf50;
+  width: 100%;
+  max-width: 100%;
+  display: inline-block;
+}
+
+.button1:hover {
+  background-color: #4caf50;
+  color: white;
+}
+
+.button3 {
+  background-color: white;
+  color: black;
+  border: 2px solid #da0000;
+  width: 100%;
+  max-width: 100%;
+  display: inline-block;
+}
+
+.button3:hover {
+  background-color: #da0000;
+  color: white;
+}
+
+p {
+  position: relative;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  color: #ffff;
+}
+
+i {
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  font-weight: 1;
+  color: #ffff;
+}
+
+#btn1,
+#btn2 {
+  display: inline-block;
+}
+
+@media (max-width: 650px) {
+  i {
+    padding: 1px;
+    padding-left: 12px;
+  }
+}

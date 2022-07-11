@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SUNBEAM RESORT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="managerial_script.js"></script>
+
+</head>
+<body>
+
+
+<!------TOP_BAR----------------->
+<div class="top-bar">
+    <div class="container">
+        <div class="col-12 text-right">
+            <p>WELCOME TO SUNBEAM RESORT</p>
+        </div>
+    </div>
+</div>
+
+
+<!-----navigation_bar------------------------------->
+
+<nav class="navbar bg-light navbar-light navbar-expand-lg">
+    <div class="container">
+
+        <a href="index.html" class="navbar-brand"><img src="logo.png" alt=""></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="nav nav-tabs navbar-nav mx-auto"role="tablist">
+                <li class="nav-item"><a href="#Reservation" class="nav-link active" data-toggle="tab">Reservation</a></li>
+                <li class="nav-item"><a href="#Booking" class="nav-link" data-toggle="tab">Booking</a></li>
+                <li class="nav-item"><a href="#Inventory" class="nav-link" data-toggle="tab">Inventory</a></li>
+                <li class="nav-item"><a href="#SalesRecord" class="nav-link" data-toggle="tab">Sales Record</a></li>
+                <li class="nav-item"><a href="#Feedback" class="nav-link" data-toggle="tab">Feedback</a></li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!----------------content-------------->
+
+<div class="tab-content">
+    <div id="Reservation" class="container tab-pane active"><br> 
+      <div class="container">
+        <div class="table-responsive">          
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First name</th>
+                  <th>Last name</th>
+                  <th>Reservation Date</th>
+                  <th>Contact Number</th>
+                  <th>Room Number</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Person</td>
+                  <td>1</td>
+                  <td>12/12/2021</td>
+                  <td>09912345678</td>
+                  <td>#12</td>
+                  <td><button type="button" class="btn btn-primary">Check In</button></td>
+                  <td><button type="button" class="btn btn-danger btn-sm">
+                    <span class="fas fa-trash"></span></button></td>
+                </tr>
+              </tbody>
+              <tr>
+                <td>2</td>
+                <td>Person</td>
+                <td>2</td>
+                <td>12/13/2021</td>
+                <td>09912345656</td>
+                <td>#04</td>
+                <td><button type="button" class="btn btn-primary">Check In</button></td>
+                <td><button type="button" class="btn btn-danger btn-sm">
+                  <span class="fas fa-trash"></span></button></td>
+              </tr>
+            </tbody>
+            <tr>
+                <td>3</td>
+                <td>Person</td>
+                <td>3</td>
+                <td>12/14/2021</td>
+                <td>09912345455</td>
+                <td>#10</td>
+                <td><button type="button" class="btn btn-primary">Check In</button></td>
+                <td><button type="button" class="btn btn-danger btn-sm">
+                  <span class="fas fa-trash"></span></button></td>
+              </tr>
+            </tbody>
+            <tr>
+                <td>4</td>
+                <td>Person</td>
+                <td>4</td>
+                <td>12/15/2021</td>
+                <td>09912344561</td>
+                <td>#07</td>
+                <td><button type="button" class="btn btn-primary">Check In</button></td>
+                <td><button type="button" class="btn btn-danger btn-sm">
+                  <span class="fas fa-trash"></span></button></td>
+              </tr>
+            </tbody>
+            <tr>
+                <td>5</td>
+                <td>Person</td>
+                <td>5</td>
+                <td>12/17/2021</td>
+                <td>09912344751</td>
+                <td>#09</td>
+                <td><button type="button" class="btn btn-primary">Check In</button></td>
+                <td><button type="button" class="btn btn-danger btn-sm">
+                  <span class="fas fa-trash"></span></button></td>
+              </tr>
+            </tbody>
+            <tr>
+                <td>6</td>
+                <td>Person</td>
+                <td>6</td>
+                <td>12/18/2021</td>
+                <td>09914569872</td>
+                <td>#05</td>
+                <td><button type="button" class="btn btn-primary">Check In</button></td>
+                <td><button type="button" class="btn btn-danger btn-sm">
+                  <span class="fas fa-trash"></span></button></td>
+              </tr>
+            </tbody>
+            <tr>
+                <td>7</td>
+                <td>Person</td>
+                <td>7</td>
+                <td>12/19/2021</td>
+                <td>09912345486</td>
+                <td>#11</td>
+                <td><button type="button" class="btn btn-primary">Check In</button></td>
+                <td><button type="button" class="btn btn-danger btn-sm">
+                  <span class="fas fa-trash"></span></button></td>
+              </tr>
+            </tbody>
+            <tr>
+                <td>8</td>
+                <td>Person</td>
+                <td>8</td>
+                <td>12/20/2021</td>
+                <td>09912456747</td>
+                <td>#15</td>
+                <td><button type="button" class="btn btn-primary">Check In</button></td>
+                <td><button type="button" class="btn btn-danger btn-sm">
+                  <span class="fas fa-trash"></span></button></td>
+              </tr>
+            </tbody>
+            <tr>
+                <td>9</td>
+                <td>Person</td>
+                <td>9</td>
+                <td>12/21/2021</td>
+                <td>09912344120</td>
+                <td>#14</td>
+                <td><button type="button" class="btn btn-primary">Check In</button></td>
+                <td><button type="button" class="btn btn-danger btn-sm">
+                  <span class="fas fa-trash"></span></button></td>
+              </tr>
+            </tbody>
+            <tr>
+                <td>10</td>
+                <td>Person</td>
+                <td>10</td>
+                <td>12/22/2021</td>
+                <td>09912315437</td>
+                <td>#08</td>
+                <td><button type="button" class="btn btn-primary">Check In</button></td>
+                <td><button type="button" class="btn btn-danger btn-sm">
+                  <span class="fas fa-trash"></span></button></td>
+              </tr>
+            </tbody>
+            </table>
+            </div>
+      </div>
+  </div>
+
+<!--------booking----------------------------->
+
+  <div id="Booking" class="container tab-pane fade"><br>
+    <div class="container">
+      <div class="table-responsive">          
+          <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First name</th>
+                  <th>Last name</th>
+                  <th>Date</th>
+                  <th>Contact Number</th>
+                  <th>Room Number</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Person</td>
+                  <td>1</td>
+                  <td>12/12/2021</td>
+                  <td>09912345678</td>
+                  <td>#12</td>
+                  <td><button type="button" class="btn btn-success" >Check Out</button></td>
+                </tr>
+              </tbody>
+              <tr>
+                <td>2</td>
+                <td>Person</td>
+                <td>2</td>
+                <td>12/13/2021</td>
+                <td>09912345656</td>
+                <td>#04</td>
+                <td><button type="button" class="btn btn-success">Check Out</button></td>
+              </tr>
+            </tbody>
+            <tr>
+                <td>3</td>
+                <td>Person</td>
+                <td>3</td>
+                <td>12/14/2021</td>
+                <td>09912345455</td>
+                <td>#10</td>
+                <td><button type="button" class="btn btn-success">Check Out</button></td>
+              </tr>
+            </tbody>
+            <tr>
+                <td>4</td>
+                <td>Person</td>
+                <td>4</td>
+                <td>12/15/2021</td>
+                <td>09912344561</td>
+                <td>#07</td>
+                <td><button type="button" class="btn btn-success">Check Out</button></td>
+              </tr>
+            </tbody>
+            <tr>
+                <td>5</td>
+                <td>Person</td>
+                <td>5</td>
+                <td>12/17/2021</td>
+                <td>09912344751</td>
+                <td>#09</td>
+                <td><button type="button" class="btn btn-success">Check Out</button></td>
+              </tr>
+            </tbody>
+            <tr>
+                <td>6</td>
+                <td>Person</td>
+                <td>6</td>
+                <td>12/18/2021</td>
+                <td>09914569872</td>
+                <td>#05</td>
+                <td><button type="button" class="btn btn-success">Check Out</button></td>
+              </tr>
+            </tbody>
+            <tr>
+                <td>7</td>
+                <td>Person</td>
+                <td>7</td>
+                <td>12/19/2021</td>
+                <td>09912345486</td>
+                <td>#11</td>
+                <td><button type="button" class="btn btn-success">Check Out</button></td>
+              </tr>
+            </tbody>
+            <tr>
+                <td>8</td>
+                <td>Person</td>
+                <td>8</td>
+                <td>12/20/2021</td>
+                <td>09912456747</td>
+                <td>#15</td>
+                <td><button type="button" class="btn btn-success">Check Out</button></td>
+              </tr>
+            </tbody>
+            <tr>
+                <td>9</td>
+                <td>Person</td>
+                <td>9</td>
+                <td>12/21/2021</td>
+                <td>09912344120</td>
+                <td>#14</td>
+                <td><button type="button" class="btn btn-success">Check Out</button></td>
+              </tr>
+            </tbody>
+            <tr>
+                <td>10</td>
+                <td>Person</td>
+                <td>10</td>
+                <td>12/22/2021</td>
+                <td>09912315437</td>
+                <td>#08</td>
+                <td><button type="button" class="btn btn-success">Check Out</button></td>
+              </tr>
+            </tbody>
+            </table>
+      </div>      
+    </div>
+
+  </div>
+<!--------inventory-----------------------------> 
+  <div id="Inventory" class="container tab-pane fade"><br>
+   
+      <div class="col-12">
+        <div class="table-responsive">          
+          <table class="table table-striped">
+        <h3>ITEM MANAGEMENT</h3>
+        <table>
+          <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th> In Use</th>
+          </tr>
+          <tr>
+            <td>Item 1</td>
+            <td> 10</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>Item 2</td>
+            <td> 20</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>Item 3</td>
+            <td> 30</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>Item 4</td>
+            <td> 40</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>Item 5</td>
+            <td> 50</td>
+            <td>25</td>
+          </tr>
+        </table>
+        <!------ADD ITEM----------------------->
+        <div class="row">
+          <div class="col-sm-3 m-auto">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Add Item</h5>
+              </div>
+            </div>
+            <form class="form-inline" action="add.item"></form>
+            <form>
+              <div class="form-group">
+                <label for="ItemName">Item Name:</label>
+                <input type="text" class="form-control" id="ItemName" placeholder="Enter Name" > 
+              </div>
+              <div class="form-group">
+                <label for="ItemQuantity">Item Quantity:</label>
+                <input type="number" class="form-control" id="ItemQuantity" placeholder="Enter Quantity">
+              </div>
+              <div class="col text-center">
+                <button type="button" class="btn btn-default" onclick="invt()">Add Item</button>
+              </div>
+            </form>
+
+          </div>
+          <!--------------UPDATE ITEM-->
+          <div class="col-sm-3 m-auto">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Update Item</h5>
+              </div>
+            </div>
+            <div class="dropdown">
+              <label for="itemName">Item Name:</label>
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="Item_Name">Items</button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Item1</a>
+                <a class="dropdown-item" href="#">Item2</a>
+                <a class="dropdown-item" href="#">Item3</a>
+                <a class="dropdown-item" href="#">Item4</a>
+                <a class="dropdown-item" href="#">Item5</a>
+              </div>
+
+            </div>
+            <form>
+              <div class="form-group">
+                <label for="itemQuantity">Item Quantity:</label>
+                <input type="number" class="form-control" id="Item_Quantity" placeholder="Enter Quantity">
+              </div>
+              <div class="col text-center">
+                <button type="button" class="btn btn-default" onclick="updt()">Update Item</button>
+              </div>
+            </form>
+          </div>
+    
+        </div>
+    
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="table-responsive">          
+          <table class="table table-striped">
+        <h3>ROOM MANAGEMENT</h3>
+        <table>
+          <tr>
+            <th>Room Name</th>
+            <th>Room Price</th>
+            <th>Room Status</th>
+          </tr>
+          <tr>
+            <td>Room 1</td>
+            <td> 1000</td>
+            <td>Vacant</td>
+          </tr>
+          <tr>
+            <td>Room 2</td>
+            <td> 2000</td>
+            <td>Occupied</td>
+          </tr>
+          <tr>
+            <td>Room 3</td>
+            <td> 2500</td>
+            <td>Vacant</td>
+          </tr>
+          <tr>
+            <td>Room 4</td>
+            <td> 1000</td>
+            <td>Vacant</td>
+          </tr>
+          <tr>
+            <td>Room 5</td>
+            <td> 2000</td>
+            <td> Occupied</td>
+          </tr>
+        </table>  
+          <div class="col-sm-3 m-auto">
+            <div class="card">
+              <div class="card-body2">
+                <h5 class="card-title">Update Room</h5>
+              </div>
+            </div>
+          </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="dropdown2 m-auto">
+                  <label for="ItemName">Room Name:</label>
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Rooms</button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Room 1</a>
+                    <a class="dropdown-item" href="#">Room 2</a>
+                    <a class="dropdown-item" href="#">Room 3</a>
+                    <a class="dropdown-item" href="#">Room 4</a>
+                    <a class="dropdown-item" href="#">Room 5</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <form>
+                  <div class="form-group2 m-auto">
+                    <label for="itemquantity">Room Price:</label>
+                    <input type="number" class="form-control" id="itemquantity" placeholder="Enter Quantity">
+                  </div>
+                </form>
+              </div>
+              <div class="col text-center">
+                <button type="button" class="btn btn-default"onclick="rm()">Update Room</button>
+              </div>
+            </div>
+
+       </div>
+      </div>
+
+
+      
+
+  </div>
+
+<!--------sales record----------------------------->
+<div id="SalesRecord" class="container tab-pane fade"><br>
+  <div class="container-sr">
+      <div class="table-responsive">
+          <table class="table table-striped" id="tblexportData">
+              <thead>
+                  <tr>
+                      <h3>Sales History</h3>
+                  </tr>
+                  <tr>
+                      <td>1</td>
+                  </tr>
+                  </tbody>
+                  <tr>
+                      <td>2</td>
+                  </tr>
+                  </tbody>
+                  <tr>
+                      <td>3</td>
+                  </tr>
+                  </tbody>
+                  <tr>
+                      <td>4</td>
+                  </tr>
+                  </tbody>
+                  <tr>
+                      <td>5</td>
+                  </tr>
+                  </tbody>
+              </thead>
+          </table>
+      </div>
+  </div>
+
+  <div class="button">
+      <button type="button" name="button" class="btn btn-primary" style="margin-bottom: 30px;" onclick="exportToExcel('tblexportData')">TRANSCRIBE</button>
+  </div>
+</div>
+
+
+<!--------feedback----------------------------->
+
+<div id="Feedback" class="container tab-pane fade"><br>
+  <div class="container-fb">
+      <div class="table-responsive">
+          <table class="table table-striped">
+              <thead>
+                  <tr>
+                      <h3>Feedback</h3>
+                  </tr>
+                  <tr>
+                      <td>1</td>
+                  </tr>
+                  </tbody>
+                  <tr>
+                      <td>2</td>
+                  </tr>
+                  </tbody>
+                  <tr>
+                      <td>3</td>
+                  </tr>
+                  </tbody>
+                  <tr>
+                      <td>4</td>
+                  </tr>
+                  </tbody>
+                  <tr>
+                      <td>5</td>
+                  </tr>
+                  </tbody>
+              </thead>
+          </table>
+      </div>
+  </div>
+</div>
+
+</body>
+
+</html>

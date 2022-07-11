@@ -1,0 +1,294 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SUNBEAM RESORT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'CSS/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'CSS/7_SMS_Managerial_Modules_CSS.css' %}">
+  <script src="{% static 'JAVA/10_SMS_Managerial_Walk_In_Script.js' %}"></script>
+
+</head>
+<body style = "background-image:url('{% static 'Media/bg.jpg'%}');">
+
+
+<!------TOP_BAR----------------->
+<div class="top-bar">
+    <div class="container">
+        <div class="col-12 text-right">
+            <p>WELCOME TO SUNBEAM RESORT</p>
+        </div>
+    </div>
+</div>
+
+
+<!-----navigation_bar------------------------------->
+
+<nav class="navbar bg-light navbar-light navbar-expand-lg">
+    <div class="container">
+
+        <a href="index.html" class="navbar-brand"><img src="logo.png" alt=""></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="nav nav-tabs navbar-nav mx-auto"role="tablist">
+                {% if user.is_authenticated %}
+                    {% if request.user.username == 'tropaniaubrey' %}
+                    <li class="nav-item"><a href="{% url 'signup' %}" class="nav-link" >Sign Up</a></li>
+                    {% endif %}
+                {% endif %}
+                <li class="nav-item"><a href="{% url 'reservation' %}" class="nav-link" >Reservation</a></li>
+                <li class="nav-item"><a href="{% url 'booking' %}" class="nav-link" >Booking</a></li>
+                <li class="nav-item"><a href="{% url 'walk_ins' %}" class="nav-link active" >Walk Ins</a></li>
+                <li class="nav-item"><a href="{% url 'inventory' %}" class="nav-link" >Inventory</a></li>
+                <li class="nav-item"><a href="{% url 'rooms' %}" class="nav-link" >Rooms</a></li>
+                <li class="nav-item"><a href="{% url 'sales' %}" class="nav-link " >Sales Record</a></li>
+                <li class="nav-item"><a href="{% url 'feedback' %}" class="nav-link" >Feedback</a></li>
+                <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!----------------content-------------->
+
+<div class="tab-content">
+    <div id="Reservation"><br> 
+        <div class="container">
+            <div class="table-responsive">
+                <div class="column1">
+                    <div class="column1">
+                        <div class="form-group row">
+                            <form action="" method="POST" id="form" name="form">
+                                {% csrf_token %}
+                            <label>First Name: </label>
+                        </div>
+                        <div class="form-group row">
+                            <label>Last Name: </label>
+                        </div>
+                        <div class="form-group row">
+                            <label>Cell Number: </label>
+                        </div>
+                        <div class="form-group row">
+                            <label>Email: </label>
+                        </div>
+                    </div>
+                    <div class="column2">
+                        <div class="form-group row">
+                            <input type="text" id="fname" name="fname" class="input" required>
+                        </div>
+                        <div class="form-group row">
+                            <input type="text" id="lname" name="lname" class="input" required>
+                        </div>
+                        <div class="form-group row">
+                            <input type="tel" id="cellnum" name="cellnum" class="input" required>
+                        </div>
+                        <div class="form-group row">
+                            <input type="email" id="email" name="email" class="input" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="column2">
+                    <div class="column1">
+                        <div class="form-group row">
+                            <label>Rooms: </label>
+                        </div>
+                        <div class="form-group row">
+                            <label>Guest: </label>
+                        </div>
+                        <div class="form-group row">
+                            <label>Check In Date: </label>
+                        </div>
+                        <div class="form-group row">
+                            <label>Check Out Date: </label>
+                        </div>
+                    </div>
+                    <div class="column2">
+                        <div class="form-group row">
+                            <select name="Room Name" id="rooms" class="input"  required>
+                                {% for rooms in roomses %}
+                                <option value="AMETHYST" id="r1">{{rooms.room_name}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="form-group row">
+                            <input type="number" id="numguest" name="numguest" class="input"  min="1" max="5" value="1" required>
+                        </div>
+                        <div class="form-group row">
+                            <input type="date" id="cidate" name="cid" class="input"  required>
+                        </div>
+                        <div class="form-group row">
+                            <input type="date" id="codate" name="cod" class="input"  required>
+                        </div>
+                    </div>
+                </div> 
+                <h3>ACTIVITIES</h3>
+                <div class="form-group row">
+                    <div class="column1">
+                        <div class="column1">
+                            <input type="checkbox" id="act1" name="act1" value="Activity 1">
+                            <label for="act1" id="act2"> Kayak </label><br>
+                        </div>
+                        <div class="column2">
+                            <input type="checkbox" id="act2x" name="act2" value="Activity 2">
+                            <label for="act2" id="act2"> Diving </label><br>
+                        </div>
+                    </div>
+                    <div class="column2">
+                        <div class="column1">
+                            <input type="checkbox" id="act3" name="act3" value="Activity 3">
+                            <label for="act3" id="act2"> Island Hopping </label><br>
+                        </div>
+                        <div class="column1">
+                            <input type="checkbox" id="act4" name="act4" value="Activity 4">
+                            <label for="act4" id="act2"> Night Diving</label><br>
+                        </div>
+                    </div>
+                </div>
+                <input type="number" id="total_days" name="total_days" class="input" hidden>
+                    <input type="text" id="activity" name="activity" class="input" value="No Activity" hidden>
+                    <input type="text" id="status" name="status" class="input" hidden>
+                    <input type="number" id="price" name="price" class="input" hidden>
+                <div class="col text-center">
+                    <button style="margin-right: 60px;" type="button" class="btn btn-default1" onclick='cancel()'>Cancel</button>
+                    <button style="margin-left: 60px;" type="button" class="btn btn-default2" onclick="reg_walkin()">Check In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+        <div class="rightbox">
+            <h4> Price Breakdown</h4>
+            <div class="row">
+                <div class="innerleftleft">
+                    <h4> Stay In Price: </h4>
+                </div>
+                <div class="innerrightleft">
+                    <h4 id="stay_in_price"></h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="innerleftleft">
+                    <h4> Activities: </h4>
+                </div>
+                <div class="innerrightleft">
+                    <h4 id="acti"> </h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="innerleftleft">
+                    <h4> Amenities: </h4>
+                </div>
+                <div class="innerrightleft">
+                    <h4> PHP 500.00 </h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="innerleftleft">
+                    <h4> Environmental Fee: </h4>
+                </div>
+                <div class="innerrightleft">
+                    <h4> PHP 250.00 </h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="innerleftleft">
+                    <h4> Reservation Fee: </h4>
+                </div>
+                <div class="innerrightleft">
+                    <h4> PHP 250.00 </h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="innerleftleft">
+                    <h4> Total: </h4>
+                </div>
+                <div class="innerrightleft">
+                    <h4 id="ttl"></h4>
+                </div>
+            </div>
+        </div>
+    <button style="margin-top: 1%;" type="button" class="btn btn-default2" onclick="checkin_bill()">Check In</button>
+    <button style="margin-top: 1%;" type="button" class="btn btn-default1" onclick="cancel_bill()">Cancel</button>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

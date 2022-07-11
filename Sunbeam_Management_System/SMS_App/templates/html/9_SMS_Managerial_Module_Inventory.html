@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SUNBEAM RESORT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{% static 'CSS/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'CSS/7_SMS_Managerial_Modules_CSS.css' %}">
+  <script src="{% static 'JAVA/8_SMS_Managerial_Module_Inventory_Script.js' %}"></script>
+
+</head>
+<body style = "background-image:url('{% static 'Media/bg.jpg'%}');">
+
+
+<!------TOP_BAR----------------->
+<div class="top-bar">
+    <div class="container">
+        <div class="col-12 text-right">
+            <p>WELCOME TO SUNBEAM RESORT</p>
+        </div>
+    </div>
+</div>
+
+
+<!-----navigation_bar------------------------------->
+
+<nav class="navbar bg-light navbar-light navbar-expand-lg">
+    <div class="container">
+
+        <a href="index.html" class="navbar-brand"><img src="logo.png" alt=""></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="nav nav-tabs navbar-nav mx-auto"role="tablist">
+              {% if user.is_authenticated %}
+                {% if request.user.username == 'tropaniaubrey' %}
+                  <li class="nav-item"><a href="{% url 'signup' %}" class="nav-link" >Sign Up</a></li>
+                {% endif %}
+              {% endif %}
+                <li class="nav-item"><a href="{% url 'reservation' %}" class="nav-link" >Reservation</a></li>
+                <li class="nav-item"><a href="{% url 'booking' %}" class="nav-link" >Booking</a></li>
+                <li class="nav-item"><a href="{% url 'walk_ins' %}" class="nav-link" >Walk Ins</a></li>
+                <li class="nav-item"><a href="{% url 'inventory' %}" class="nav-link active" >Inventory</a></li>
+                <li class="nav-item"><a href="{% url 'rooms' %}" class="nav-link" >Rooms</a></li>
+                <li class="nav-item"><a href="{% url 'sales' %}" class="nav-link " >Sales Record</a></li>
+                <li class="nav-item"><a href="{% url 'feedback' %}" class="nav-link" >Feedback</a></li>
+                <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link">Logout</a></li>
+        </div>
+    </div>
+</nav>
+
+<!--------inventory-----------------------------> 
+  <div id="Inventory"><br>
+   
+      <div class="col-12">
+        <div class="table-responsive">          
+          <table class="table table-striped">
+        <h3>ITEM MANAGEMENT</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Quantity</th>
+              <th>In Use</th>
+            </tr>
+          </thead>
+          {% for item in itemses %}
+          <tr>
+            <th>{{item.item_name}}</th>
+            <th>{{item.item_quantity}}</th>
+            <th>{{item.item_inuse}}</th>
+          </tr>
+          {% endfor %}
+        </table>
+          <!--------------UPDATE ITEM-->
+          <div class="col-sm-3 m-auto">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Update Item</h5>
+              </div>
+            </div>
+            <div class="dropdown">
+              <form action="" method="POST" id="form" name="form">
+              {% csrf_token %}
+              <label for="itemName">Item Name:</label>
+              <select class="dropdown-item" id="items" name="items">
+                {% for item in itemses %}
+                <option value='{{item.item_name}}'>{{item.item_name}}</option>
+                {% endfor %}
+              </select>
+            </div>
+              <div class="form-group">
+                <label for="itemQuantity">Item Quantity:</label>
+                <input type="number" class="form-control" id="Item_Quantity" name="Item_Quantity" placeholder="Enter Quantity" min="1" max="99">
+              </div>
+              <div class="col text-center">
+                <button type="button" class="btn btn-default" onclick="update_item()">Update Item</button>
+              </div>
+          </div>
+        </div>
+        </div>
+            </div>
+
+</body>
+
+</html>
